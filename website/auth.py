@@ -3,7 +3,7 @@ from flask import Blueprint, render_template, request
 auth = Blueprint('auth', __name__)
 
 
-@auth.route('/login', method=['GET', 'POST'])
+@auth.route('/login', methods=['GET', 'POST'])
 def login():
     return render_template("login.html")
 
@@ -15,7 +15,7 @@ def logout():
 
 
 
-@auth.route('/sign-up', method=['GET', 'POST'])
+@auth.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'POST':
         
